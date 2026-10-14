@@ -133,3 +133,18 @@ h1 em,h2 em { color:var(--coral-deep); font-style:normal; font-weight:700; }
   .catalog-card:has(.product-photo) { grid-template-columns:1fr; }
   .catalog-card:has(.product-photo) .catalog-card__visual,.product-photo { min-height:235px; height:235px; }
 }
+
+@media (max-width:600px) {
+  .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .catalog-card:has(.product-photo) { display:block; min-height:0; }
+  .catalog-card:has(.product-photo) .catalog-card__visual,.catalog-card:has(.product-photo) .product-photo { min-height:158px; height:158px; }
+  .catalog-card:has(.product-photo) .catalog-card__content { padding:16px 13px 15px; }
+  .catalog-card h3 { font-size:20px; line-height:1.04; }
+  .catalog-card__category { font-size:8px; }
+  .catalog-card__content > p:not(.catalog-card__category) { margin:10px 0 14px; font-size:11px; line-height:1.4; }
+  .product-price { flex-wrap:wrap; gap:4px; margin-bottom:13px; font-size:15px; }
+  .product-price small { font-size:7px; }
+  .catalog-link { gap:5px; font-size:9px; }
+  .catalog-card:has(.product-photo) .catalog-card__tag { left:10px; bottom:10px; padding:6px 7px; font-size:7px; }
+}
+
